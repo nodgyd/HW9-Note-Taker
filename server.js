@@ -56,7 +56,6 @@ app.route("/api/notes")
         res.json(newNote);
     });
 
-
 app.delete("/api/notes/:id", function (req, res) {
     let jsonFilePath = path.join(__dirname, "/db/db.json");
     for (let i = 0; i < database.length; i++) {
