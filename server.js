@@ -31,7 +31,7 @@ app.route("/api/notes")
 
 
     .post(function (req, res) {
-        let jsonFilePath = path.join(__dirname, "/db/db.json");
+        let jsonPath = path.join(__dirname, "/db/db.json");
         let newNote = req.body;
 
         let highestId = 99;
@@ -46,7 +46,7 @@ app.route("/api/notes")
         newNote.id = highestId + 1;
         database.push(newNote)
 
-        fs.writeFile(jsonFilePath, JSON.stringify(database), function (err) {
+        fs.writeFile(jsonPath, JSON.stringify(database), function (err) {
 
             if (err) {
                 return console.log(err);
@@ -57,7 +57,7 @@ app.route("/api/notes")
     });
 
 app.delete("/api/notes/:id", function (req, res) {
-    let jsonFilePath = path.join(__dirname, "/db/db.json");
+    let jsonPath = path.join(__dirname, "/db/db.json");
     for (let i = 0; i < database.length; i++) {
 
         if (database[i].id == req.params.id) {
@@ -65,7 +65,7 @@ app.delete("/api/notes/:id", function (req, res) {
             break;
         }
     }
-    fs.writeFileSync(jsonFilePath, JSON.stringify(database), function (err) {
+    fs.writeFileSync(jsonPath, JSON.stringify(database), function (err) {
 
         if (err) {
             return console.log(err);

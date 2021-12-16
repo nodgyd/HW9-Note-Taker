@@ -17,9 +17,8 @@
   "bugs": {
     "url": "https://github.com/nodgyd/HW9-Note-Taker/issues"
   },
-  "homepage": "https://github.com/nodgyd/HW9-Note-Taker#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "heroku": "^7.59.2"
+    "heroku": "^7.33.3"
   }
 }
