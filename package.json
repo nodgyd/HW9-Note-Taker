@@ -18,7 +18,11 @@
     "url": "https://github.com/nodgyd/HW9-Note-Taker/issues"
   },
   "dependencies": {
-    "express": "^4.17.1",
-    "heroku": "^7.33.3"
+    "express": "^4.17.1"
+  },
+  {
+    "engines": {
+      "node": "14.x"
+    }
   }
 }
